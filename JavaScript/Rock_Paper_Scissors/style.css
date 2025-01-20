@@ -4,19 +4,19 @@ body {
     background-color: #f0f8ff;
     margin: 0;
     padding: 20px;
-  }
-  
-  h1 {
+}
+
+h1 {
     color: #333;
     font-size: 2.5rem;
     margin-bottom: 20px;
-  }
-  
-  .buttons {
+}
+
+.buttons {
     margin: 20px 0;
-  }
-  
-  button {
+}
+
+button {
     background-color: #4caf50;
     color: white;
     border: none;
@@ -26,20 +26,44 @@ body {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #45a049;
     transform: scale(1.1);
-  }
-  
-  button:active {
+}
+
+button:active {
     background-color: #3e8e41;
-  }
-  
-  #result {
+}
+
+#result {
     margin-top: 20px;
     font-size: 1.2rem;
     color: #555;
-  }
-  
+}
+
+#result.win {
+    color: green;
+    font-weight: bold;
+}
+
+#result.lose {
+    color: red;
+    font-weight: bold;
+}
+
+#reset {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#reset:hover {
+    background-color: #e53935;
+}
