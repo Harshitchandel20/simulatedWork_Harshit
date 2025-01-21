@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  h2 {
+    margin: 10px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mole {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://github.com/Kalvium-Program/Image-files/blob/main/mole.jpg?raw=true');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .square:hover {
+    background-color: #d6d6d6;
+  }
+  
+  #reset-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #reset-btn:hover {
+    background-color: #45a049;
+  }
+  
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(3, 80px);
+      grid-gap: 8px;
+    }
+  
+    .square {
+      width: 80px;
+      height: 80px;
+    }
+  
+    #reset-btn {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
