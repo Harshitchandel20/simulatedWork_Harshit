@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h1.title {
+    font-size: 50px;
+    color: #27fd99;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 5px rgba(30, 1, 253, 0.518);
+}
+
+.game-info {
+    margin-bottom: 20px;
+}
+
+.current-player {
+    font-size: px;
+    color: #333;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.result-message {
+    font-size: 22px;
+    color: #d9534f;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.reset-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.reset-btn:hover {
+    background-color: #31b0d5;
+    transform: scale(1.1);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 10px;
+    margin: 20px auto;
+    position: relative;
+    background: linear-gradient(45deg, #ff9a8b, #ff6a88, #ff7b9c);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.grid div {
+    width: 60px;
+    height: 60px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid div:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grid div.taken {
+    background-color: #ccc;
+}
+
+.grid div.player-one {
+    background-color: #ecfa29;
+    animation: coinDrop 0.5s ease-in-out;
+}
+
+.grid div.player-two {
+    background-color: #44dafc;
+    animation: coinDrop 0.5s ease-in-out;
+}
+
+@keyframes coinDrop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.grid div:nth-child(n+43) {
+    display: none;
+}
+
+.instruction {
+    font-size: 16px;
+    color: #555;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(7, 50px);
+        grid-template-rows: repeat(6, 50px);
+    }
+
+    .grid div {
+        width: 50px;
+        height: 50px;
+    }
+
+    .reset-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .current-player,
+    .result-message {
+        font-size: 18px;
+    }
+}
+
+.current-player {
+    color: #ff3636;
+    text-shadow: 0 0 15px #2ef60a, 0 0 25px #1ed6ff, 0 0 35px #c1f8ff;
+}
