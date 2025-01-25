@@ -1,0 +1,137 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(to bottom, #000428, #004e92); 
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(15, 35px); 
+    grid-template-rows: repeat(15, 35px); 
+    gap: 4px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); 
+    padding: 10px;
+}
+
+.grid div {
+    width: 35px;
+    height: 35px;
+    /* background-color: black; */
+    border-radius: 5px; 
+}
+
+.invader {
+    background-color: #ff1744; 
+    border-radius: 50%; 
+    animation: pulse 1s infinite; 
+}
+
+.shooter {
+    background-color: #2979ff; 
+    border-radius: 50%; 
+    box-shadow: 0 0 15px #2979ff;
+}
+
+.laser {
+    background-color: #00e5ff; 
+    height: 100%;
+    width: 5px;
+    box-shadow: 0 0 15px #00e5ff;
+}
+
+.boom {
+    background-color: #ffffff; 
+    border-radius: 50%; 
+    box-shadow: 0 0 25px #ffffff;
+}
+
+.results {
+    font-size: 40px; 
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px #ffffff, 0 0 30px #ff1744;
+}
+
+.reset-button {
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #004e92; 
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #004e92;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #ff1744; 
+    transform: scale(1.1); 
+    box-shadow: 0 0 25px #ff1744;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px #ff1744;
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 20px #ff1744;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px #ff1744;
+    }
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.invader:nth-child(odd) {
+    background-color: #ffea00; 
+}
+
+.invader:nth-child(even) {
+    background-color: #00e676; 
+}
+
+
+.shooter:nth-child(odd) {
+    background-color: #2979ff; 
+}
+
+.shooter:nth-child(even) {
+    background-color: #ff4081; 
+}
